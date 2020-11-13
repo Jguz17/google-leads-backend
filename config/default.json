@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://user123:user123@google-leads-backend.bulac.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
