@@ -3,9 +3,7 @@ const router = express.Router()
 const { check, validationResult } = require('express-validator')
 const auth = require('../middleware/auth')
 
-const User = require('../models/User')
 const Place = require('../models/Place')
-const { findByIdAndRemove } = require('../models/User')
 
 router.get('/', auth, async (req, res) => {
     try {
@@ -28,7 +26,7 @@ router.post('/', [ auth, [
         })
     }
 
-    const { name, email, phone, address } = req.body
+    const { name, email, phone, address, website } = req.body
 
     try {
         const newPlace = new Place({
@@ -36,6 +34,7 @@ router.post('/', [ auth, [
             email,
             phone,
             address,
+            website,
             user: req.user.id
         })
 
@@ -57,6 +56,7 @@ router.put('/:id', auth, async (req, res) => {
     if (email) placeFields.email = email
     if (phone) placeFields.phone = phone
     if (address) placeFields.address = address
+    if (website) placeFields.website = website
 
     try {
         let place = await Place.findById(req.params.id)
