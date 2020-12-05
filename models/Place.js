@@ -18,6 +18,9 @@ const PlaceSchema = mongoose.Schema({
     address: {
         type: String    
     },
+    website: {
+        type: String
+    },
     date: {
         type: Date,
         default: Date.now
