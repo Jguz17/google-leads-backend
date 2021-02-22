@@ -2,6 +2,10 @@
 
 Google leads is a project that uses the Google Maps Places API. The backend is built using Node.js and Express.js, and jwt to handle user auth. 
 
+This repo serves as a server, so you can host the project locally. 
+
+You don't this to use the frontend. The frontend is using a live version of this backend.
+
 ## Installation
 
 After you have cloned this repo, in your cli navigate to the project folder and then to the config folder, like so: google-leads-backend/config. Then, change the mongoURI in the default.json file. You can get a new one by creating a new cluster in MongoDB.
