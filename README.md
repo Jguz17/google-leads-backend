@@ -4,7 +4,7 @@ Google leads is a project that uses the Google Maps Places API. The backend is b
 
 This repo serves as a server, so you can host the project locally. 
 
-You don't this to use the frontend. The frontend is using a live version of this backend.
+You don't need this to use the frontend. The frontend is using a live version of this backend.
 
 ## Installation
 
